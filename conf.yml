@@ -1,0 +1,13 @@
+app:
+  name: "image upload server"
+  token: "hello world"
+  water_mark: "Created By TerryROD"
+service:
+  listen: "127.0.0.1:8080"
+  read_timeout: "30s"
+  write_timeout: "30s"
+  max_header_bytes: 1<<20
+upload:
+  maxSize: 10<<20
+  root: "/tmp/img_upload"
+  domain: "http://127.0.0.1:8080/upload_imgs"
