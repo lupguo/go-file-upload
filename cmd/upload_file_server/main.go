@@ -7,7 +7,7 @@ import (
 	"net"
 	"net/http"
 
-	"github.com/lupguo/go-file-upload/application"
+	"github.com/lupguo/go-file-upload/app"
 	"github.com/lupguo/go-file-upload/config"
 	"github.com/lupguo/go-file-upload/handler"
 )
@@ -40,7 +40,7 @@ func main() {
 	}
 
 	// 基础服务器处理程序
-	app := application.NewApp(context.Background())
+	app := app.NewApp(context.Background())
 	h := handler.NewHandler(app)
 	http.HandleFunc("/", h.IndexHandle)
 	http.HandleFunc("/upload", h.Upload)
